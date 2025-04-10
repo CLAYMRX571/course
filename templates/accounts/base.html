@@ -1,32 +1,27 @@
 <!DOCTYPE HTML>
+{% load static %}
 <html>
 	<head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Learn &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Online Course</title>
+	<meta http-equiv="x-ua-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="freehtml5.co" />
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co">
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive">
+	<meta name="author" content="freehtml5.co">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 	</head>
 	<body>
 		
@@ -38,11 +33,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-right">
-						<p class="num">Call: +01 123 456 7890</p>
+						<p class="num">Call: +998881031904</p>
 						<ul class="fh5co-social">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							<li><a href="#"><i class="icon-github"></i></a></li>
+							<li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+							<li><a href="#"><i class="fa-brands fa-github"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -52,25 +46,26 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-1">
-						<div id="fh5co-logo"><a href="index.html">Learn<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html">Course</a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li class="active"><a href="courses.html">Courses</a></li>
-							<li><a href="pricing.html">Pricing</a></li>
-							<li class="has-dropdown">
-								<a href="blog.html">Blog</a>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li class="has-dropdown"><a href="courses.html">Courses</a>
 								<ul class="dropdown">
-									<li><a href="#">Web Design</a></li>
-									<li><a href="#">eCommerce</a></li>
-									<li><a href="#">Branding</a></li>
-									<li><a href="#">API</a></li>
+									<li><a href="#">Design</a></li>
+									<li><a href="#">Frontend</a></li>
+									<li><a href="#">Backend</a></li>
+									<li><a href="#">Mysql</a></li>
+									<li><a href="#">Machine Learning</a></li>
+									<li><a href="#">AI</a></li>
 								</ul>
 							</li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="blog.html">Blog</a></li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
-							<li class="btn-cta"><a href="#"><span>Create a Course</span></a></li>
+							<li class="btn-cta"><a href="#"><span>Register</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -79,15 +74,15 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url('images/kurs.png');" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Courses</h1>
-							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>
+							<h1>You can learn programming in an online course</h1>
+							<p><a class="btn btn-primary btn-lg btn-learn" href="courses.html">Create A Free Course</a> <a class="btn btn-primary btn-lg popup-vimeo btn-video" href="https://vimeo.com/channels/staffpicks/93951774"><i class="fa-solid fa-play"></i> Play Video</a></p>
 						</div>
 					</div>
 				</div>
@@ -99,7 +94,7 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Take A Course</h2>
+					<h2>Create A Free Course</h2>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
 			</div>
@@ -114,12 +109,7 @@
 						<div class="mt">
 							<h3>We Want You To Learn English</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="list-nav">
-								<li><i class="icon-check2"></i>Far far away, behind the word</li>
-								<li><i class="icon-check2"></i>There live the blind texts</li>
-								<li><i class="icon-check2"></i>Separated they live in bookmarksgrove</li>
-							</ul>
-							<p><a class="btn btn-primary btn-lg popup-vimeo btn-video" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play"></i> Watch Video</a></p>
+							<p><a class="btn btn-primary btn-lg popup-vimeo btn-video" href="https://vimeo.com/channels/staffpicks/93951774"><i class="fa-solid fa-play"></i> Watch Video</a></p>
 						</div>
 					</div>
 				</div>
@@ -135,15 +125,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="mt">
 							<div>
-								<h4><i class="icon-user"></i>Real Project For Real Solutions</h4>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. </p>
-							</div>
-							<div>
-								<h4><i class="icon-video2"></i>Real Project For Real Solutions</h4>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-							</div>
-							<div>
-								<h4><i class="icon-shield"></i>Real Project For Real Solutions</h4>
+								<h4><i class="fa-solid fa-code"></i>Real Project For Real Solutions</h4>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. </p>
 							</div>
 						</div>
@@ -152,8 +134,16 @@
 			</div>
 		</div>
 	</div>
-
+	
 	<div id="fh5co-project">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Showcase of A Finish Projects</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+		</div>
 		<div class="container-fluid proj-bottom">
 			<div class="row">
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
@@ -194,29 +184,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="features">
-					<div class="col-md-4 animate-box">
-						<h4>We have coolest features of this course</h4>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  </p>
-					</div>
-					<div class="col-md-4 animate-box">
-						<h4>Great teachers that we have</h4>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  </p>
-					</div>
-					<div class="col-md-4 animate-box">
-						<h4>Steps by steps turorial session</h4>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  </p>
-					</div>
-				</div>
-				<div class="col-md-12 text-center animate-box">
-					<p><a class="btn btn-primary btn-lg btn-learn" href="#">Create A Free Course</a></p>
-				</div>
-			</div>
-		</div>
 	</div>
-	
+
 	<div id="fh5co-started" style="background-image:url(images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -288,15 +257,11 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="https://t.me/musulmon_0319" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+							<li><a href="https://freehtml5.co/" target="_blank"><i class="fa-brands fa-google"></i></a></li>
 						</ul>
 					</p>
 				</div>
@@ -305,18 +270,20 @@
 		</div>
 	</footer>
 	</div>
-	
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.countTo.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<script src="js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.easing.1.3.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.countTo.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/magnific-popup-options.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/modernizr-2.6.2.min.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	{% block extra_js %}
 
-	</body>
+    {% endblock extra_js %}
+</body>
 </html>
-
