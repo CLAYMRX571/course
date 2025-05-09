@@ -14,6 +14,7 @@
 		<meta property="og:url" content="">
 		<meta property="og:site_name" content="">
 		<meta property="og:description" content="">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/mrx.jpg' %}">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 		<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
@@ -30,25 +31,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-1">
-						<div id="fh5co-logo"><a href="">Course</a></div>
+						<div id="fh5co-logo"><a href="{% url 'accounts:index' %}">Course</a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
-							<li class="active"><a href="{% url 'accounts:index' %}">Home</a></li>
-							<li class="has-dropdown"><a href="">Category</a>
-								<ul class="dropdown">
-									<li><a href="">Design</a></li>
-									<li><a href="">Frontend</a></li>
-									<li><a href="">Backend</a></li>
-									<li><a href="">Mysql</a></li>
-									<li><a href="">Machine Learning</a></li>
-									<li><a href="">AI</a></li>
-								</ul>
-							</li>
-							<li><a href="">Group</a></li>
-							<li><a href="">Price</a></li>
-							<li><a href="">Blog</a></li>
-							<li><a href="">Contact</a></li>
+							<li><a href="{% url 'categories' %}">Category</a></li>
+							<li><a href="{% url 'courses' %}">Group</a></li>
+							<li><a href="{% url 'prices' %}">Price</a></li>
+							<li><a href="{% url 'blog' %}">Blog</a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
 							<li class="btn-cta"><a href="{% url 'accounts:login' %}"><span>Login</span></a></li>
 							<li class="btn-cta"><a href="{% url 'accounts:register' %}"><span>Register</span></a></li>
 						</ul>
@@ -66,7 +57,7 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>You can learn programming in an online course</h1>
-							<p><a class="btn btn-primary btn-lg btn-learn" href="">Create A Free Course</a> <a class="btn btn-primary btn-lg btn-video" href="https://www.youtube.com/@maqsadliKundalik" target="_blank"><i class="fa-solid fa-play"></i> Play Video</a></p>
+							<p><a class="btn btn-primary btn-lg btn-learn" href="{% url 'categories' %}">Create A Free Course</a> <a class="btn btn-primary btn-lg btn-video" href="https://www.youtube.com/@maqsadliKundalik" target="_blank"><i class="fa-solid fa-play"></i> Play Video</a></p>
 						</div>
 					</div>
 				</div>
@@ -91,24 +82,6 @@
 		</div>
 	</div>
 	
-	<div id="fh5co-project">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Programming language</h2>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid proj-bottom">
-			<div class="row">
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="{% static 'assets/imgs/project-1.jpg' %}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>C++</h3>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
@@ -120,12 +93,12 @@
 				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
 					<h4>Menu</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="">Home</a></li>
-						<li><a href="">Category</a></li>
-						<li><a href="">Group</a></li>
-						<li><a href="">Price</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="{% url 'accounts:index' %}">Course</a></li>
+						<li><a href="{% url 'categories' %}">Category</a></li>
+						<li><a href="{% url 'courses' %}">Group</a></li>
+						<li><a href="{% url 'prices' %}">Price</a></li>
+						<li><a href="{% url 'blog' %}">Blog</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul>
 				</div>
 			</div>

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'apps.student',
     'apps.useradmin',
     'apps.teacher',
+    'apps.common',
 ]
 
 MIDDLEWARE = [
@@ -131,11 +132,11 @@ AUTH_USER_MODEL = 'user.User'
 
 DEFAULT_FROM_EMAIL = 'claymrx571@gmail.com'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'claymrx571@gmail.com'
-EMAIL_HOST_PASSWORD = 'lmbmjxvrobkzdnjt'
+EMAIL_HOST_PASSWORD = 'vaihlmyptkozthul'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
@@ -240,6 +241,9 @@ JAZZMIN_SETTINGS = {
     # for the full list of 5.13.0 free icon classes
     "icons": {
         "auth.group": "fa fa-users",
+        "user.passwordresetcode": "fa fa-key",
+        "user.user": "fa fa-users", 
+        "useradmin.course": "fa fa-code",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",

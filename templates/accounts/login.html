@@ -14,6 +14,7 @@
 	<meta property="og:url" content="">
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/mrx.jpg' %}">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
@@ -33,21 +34,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-1">
-						<div id="fh5co-logo"><a href="">Course</a></div>
+						<div id="fh5co-logo"><a href="{% url 'accounts:index' %}">Course</a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
-							<li class="active"><a href="{% url 'accounts:index' %}">Home</a></li>
-							<li class="has-dropdown"><a href="">Category</a>
-								<ul class="dropdown">
-									<li><a href="">Design</a></li>
-									<li><a href="">Frontend</a></li>
-									<li><a href="">Backend</a></li>
-									<li><a href="">Mysql</a></li>
-									<li><a href="">Machine Learning</a></li>
-									<li><a href="">AI</a></li>
-								</ul>
-							</li>
+							<li><a href="">Category</a></li>
 							<li><a href="">Group</a></li>
 							<li><a href="">Price</a></li>
 							<li><a href="">Blog</a></li>
@@ -62,7 +53,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url({% static 'assets/imgs/dev.jpg' %});" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url({% static 'assets/imgs/kurs.png' %});" data-stellar-background-ratio="0.5">
 	<div class="overlay">
 		<div class="container">
 			<div class="row">

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
-from apps.useradmin.models import BaseModel
+from apps.common.models import BaseModel
 import uuid
 import datetime
 
@@ -19,9 +19,9 @@ class MyUserManager(BaseUserManager):
         extra_fields.setdefault("is_superuser", True)
 
         if extra_fields.get("is_staff") is not True:
-            raise ValueError("Superuser must have is_staff=True.")
+            raise ValueError("Superuser must have is_staff=True")
         if extra_fields.get("is_superuser") is not True:
-            raise ValueError("Superuser must have is_superuser=True.") 
+            raise ValueError("Superuser must have is_superuser=True") 
         
         return self.create_user(phone, password, **extra_fields)  
 
@@ -46,7 +46,7 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
     
-EXPIRED_TIME = 5
+EXPIRED_TIME = 5 
 
 class PasswordResetCode(BaseModel):
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
