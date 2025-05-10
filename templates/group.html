@@ -35,11 +35,11 @@
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
-							<li><a href="">Category</a></li>
-							<li><a href="">Group</a></li>
-							<li><a href="">Price</a></li>
-							<li><a href="">Blog</a></li>
-							<li><a href="">Contact</a></li>
+							<li><a href="{% url 'categories' %}">Category</a></li>
+							<li><a href="{% url 'courses' %}">Group</a></li>
+							<li><a href="{% url 'prices' %}">Price</a></li>
+							<li><a href="{% url 'blog' %}">Blog</a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
 							<li class="btn-cta"><a href="{% url 'accounts:login' %}"><span>Login</span></a></li>
 							<li class="btn-cta"><a href="{% url 'accounts:register' %}"><span>Register</span></a></li>
 						</ul>
@@ -56,8 +56,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>You can learn programming in an online course</h1>
-							<p><a class="btn btn-primary btn-lg btn-learn" href="">Create A Free Course</a> <a class="btn btn-primary btn-lg btn-video" href="https://www.youtube.com/@maqsadliKundalik" target="_blank"><i class="fa-solid fa-play"></i> Play Video</a></p>
+							<h1>Category</h1>
 						</div>
 					</div>
 				</div>
@@ -70,8 +69,8 @@
 			<div class="row">
 				{% for category in categories %}
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="{% url 'courses' %}"><img src="{{ category.file.url }}" alt="" class="img-responsive">
-						<span style="color: yellow">{{ category.desc }}</span>
+					<a href="{% url 'courses' %}"><img src="{{ category.image.url }}" alt="" class="img-responsive">
+						<span style="color: black">{{ category.desc }}</span>
 					</a>
 				</div>
 				{% endfor %}
@@ -90,11 +89,11 @@
 					<h4>Menu</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="{% url 'accounts:index' %}">Course</a></li>
-						<li><a href="">Category</a></li>
-						<li><a href="">Group</a></li>
-						<li><a href="">Price</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="{% url 'categories' %}">Category</a></li>
+						<li><a href="{% url 'courses' %}">Group</a></li>
+						<li><a href="{% url 'prices' %}">Price</a></li>
+						<li><a href="{% url 'blog' %}">Blog</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul>
 				</div>
 			</div>

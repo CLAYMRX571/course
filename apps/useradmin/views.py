@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from .models import Category, Course, Price
+from .models import Category, Course, Price, Blog
 from django.views.generic import ListView
 from django.shortcuts import render
 
@@ -32,8 +32,13 @@ class PriceListView(ListView):
     def get_queryset(self):
         return Price.objects.all()
 
-class BlogView(TemplateView):
-    template_name = "blog.html"
+class BlogView(ListView):
+    model = Blog
+    template_name = 'blog.html'
+    context_object_name = 'prices'
+
+    def get_queryset(self):
+        return Price.objects.all()
 
 class ContactView(TemplateView):
     template_name = "contact.html"

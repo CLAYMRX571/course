@@ -488,11 +488,6 @@ h1, h2, h3, h4, h5, h6, figure {
   border: none;
 }
 
-.fh5co-bg-section {
-  background: rgba(0, 0, 0, 0.05);
-  background-image: url("/static/assets/imgs/sql.png");
-}
-
 #fh5co-explore,
 #fh5co-pricing,
 #fh5co-testimonial,
@@ -529,6 +524,79 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-explore .fh5co-explore1 {
   margin-bottom: 7em;
+}
+
+.marketing-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px 15px;
+}
+
+.course-card {
+  width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 16px;
+  background-color: #f9f9fb;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.course-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: lch(3.32% 0 296.81);
+  margin: 10px 0;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.course-rating {
+  font-size: 14px;
+  color: #444;
+}
+
+.course-rating .star {
+  color: orange;
+  margin-right: 4px;
+}
+
+.course-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
 .mt {
@@ -1046,84 +1114,64 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .pricing {
-  display: block;
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* oraliq qo‘shadi */
   margin-bottom: 30px;
-  width: 100%;
 }
 
 .price-box {
-  width: 100%;
+  width: 250px;
   text-align: center;
   padding: 30px;
   background: rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 40px;
-  position: relative;
-}
-.price-box.popular .btn-select-plan {
-  background: #EA9215;
-}
-.price-box.popular .price {
-  color: #EA9215;
-}
-.price-box .btn-select-plan {
-  padding: 10px 20px;
-  background: #09C6AB;
-  color: #fff;
-}
-.price-box .classes {
-  padding: 0;
-}
-.price-box .classes li {
-  display: block;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  font-size: 16px;
-  padding: 8px 10px;
-}
-.price-box .classes li.color {
-  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-plan {
-  margin: 0 0 50px 0;
-  padding: 0;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #888f94;
-}
-.pricing-plan.pricing-plan-offer {
-  margin-bottom: 24px;
-}
-.pricing-plan span {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #d5d8db;
+  font-size: 16px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .price {
-  font-size: 72px;
+  font-size: 28px;
+  font-weight: bold;
   color: #000;
-  line-height: 50px;
+  margin-bottom: 10px;
 }
-.price .currency {
-  font-size: 30px;
-  top: -0.9em;
-  padding-right: 10px;
+
+.classes {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  font-size: 14px;
 }
-.price small {
-  font-size: 13px;
-  display: block;
-  text-transform: uppercase;
-  color: #888f94;
+
+.classes li {
+  padding: 6px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.btn-select-plan {
+  display: inline-block;
+  background-color: #1dd1a1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-select-plan:hover {
+  background-color: #10ac84;
 }
 
 #fh5co-footer {

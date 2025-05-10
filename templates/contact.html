@@ -35,20 +35,11 @@
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
-							<li class="has-dropdown"><a href="">Category</a>
-								<ul class="dropdown">
-									<li><a href="">Design</a></li>
-									<li><a href="">Frontend</a></li>
-									<li><a href="">Backend</a></li>
-									<li><a href="">Mysql</a></li>
-									<li><a href="">Machine Learning</a></li>
-									<li><a href="">AI</a></li>
-								</ul>
-							</li>
-							<li><a href="">Group</a></li>
-							<li><a href="">Price</a></li>
-							<li><a href="">Blog</a></li>
-							<li><a href="">Contact</a></li>
+							<li><a href="{% url 'categories' %}">Category</a></li>
+							<li><a href="{% url 'courses' %}">Group</a></li>
+							<li><a href="{% url 'prices' %}">Price</a></li>
+							<li><a href="{% url 'blog' %}">Blog</a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
 							<li class="btn-cta"><a href="{% url 'accounts:login' %}"><span>Login</span></a></li>
 							<li class="btn-cta"><a href="{% url 'accounts:register' %}"><span>Register</span></a></li>
 						</ul>
@@ -79,17 +70,14 @@
 				<div class="col-md-5 col-md-push-1 animate-box">	
 					<div class="fh5co-contact-info">
 						<h3>Contact Information</h3>
-						<ul>
-							<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li class="url"><a href="http://gettemplates.co">gettemplates.co</a></li>
-						</ul>
+						<span>🏢 Address:<a href="https://www.google.com/maps" target="_blank"> Tashkent</a></span><br>
+						<span>📞 Phone number:<a href="https://m.vk.com/?ysclid=mahrgs9qxj683418304" target="_blank"> +998881031904</a></span><br>
+						<span>📧 Email:<a href="https://mail.google.com/mail/u/0/" target="_blank"> claymrx571@gmail.com</a></span>
 					</div>
 				</div>
 				<div class="col-md-6 animate-box">
 					<h3>Get In Touch</h3>
-					<form action="#">
+					<form action="">
 						<div class="row form-group">
 							<div class="col-md-6">
 								<!-- <label for="fname">First Name</label> -->
@@ -100,21 +88,12 @@
 								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
 							</div>
 						</div>
-
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="email">Email</label> -->
 								<input type="text" id="email" class="form-control" placeholder="Your email address">
 							</div>
 						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-							</div>
-						</div>
-
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="message">Message</label> -->
@@ -124,7 +103,6 @@
 						<div class="form-group">
 							<input type="submit" value="Send Message" class="btn btn-primary">
 						</div>
-
 					</form>		
 				</div>
 			</div>	
@@ -142,11 +120,11 @@
 					<h4>Menu</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="{% url 'accounts:index' %}">Course</a></li>
-						<li><a href="">Category</a></li>
-						<li><a href="">Group</a></li>
-						<li><a href="">Price</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="{% url 'categories' %}">Category</a></li>
+						<li><a href="{% url 'courses' %}">Group</a></li>
+						<li><a href="{% url 'prices' %}">Price</a></li>
+						<li><a href="{% url 'blog' %}">Blog</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul>
 				</div>
 			</div>

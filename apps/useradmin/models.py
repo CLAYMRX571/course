@@ -7,7 +7,7 @@ from django.db import models
 
 class Category(BaseModel):
     desc = models.TextField()
-    file = models.FileField(upload_to='photos/')
+    image = models.FileField(upload_to='category/')
 
     class Meta:
         verbose_name = "Category"
@@ -26,9 +26,8 @@ class Course(BaseModel):
         (2, '2 soat'),
     ]
     created_by_admin = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-    name = models.CharField(max_length=255)
     desc = models.TextField()
-    file = models.FileField(upload_to='photos/')
+    photo = models.FileField(upload_to='course/')
     group_number = models.IntegerField(default=0)
     begin_time = models.TimeField(choices=BEGIN_TIME)
     duration = models.IntegerField(choices=DURATION, default=2)
@@ -49,9 +48,6 @@ class Course(BaseModel):
         verbose_name = "Course"
         verbose_name_plural = "Courses"
 
-    def __str__(self):
-        return self.name 
-
 class Price(BaseModel):
     name = models.CharField(max_length=255)
     price = models.IntegerField(default=0)
@@ -61,6 +57,14 @@ class Price(BaseModel):
     @property
     def count_lessons(self):
         return self.lessons.count()
+
+    def __str__(self):
+        return self.name 
+
+class Blog(BaseModel):
+    name = models.CharField(max_length=255)
+    desc = models.TextField()
+    imgs = models.FileField(upload_to='blogs/')
 
     def __str__(self):
         return self.name 

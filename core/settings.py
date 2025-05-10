@@ -243,7 +243,9 @@ JAZZMIN_SETTINGS = {
         "auth.group": "fa fa-users",
         "user.passwordresetcode": "fa fa-key",
         "user.user": "fa fa-users", 
+        "useradmin.category": "fa-solid fa-list",
         "useradmin.course": "fa fa-code",
+        "useradmin.price": "fa-solid fa-wallet",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
