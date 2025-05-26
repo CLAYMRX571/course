@@ -243,6 +243,7 @@ JAZZMIN_SETTINGS = {
         "auth.group": "fa fa-users",
         "user.passwordresetcode": "fa fa-key",
         "user.user": "fa fa-users", 
+        "useradmin.blog": "fa-solid fa-blog",
         "useradmin.category": "fa-solid fa-list",
         "useradmin.course": "fa fa-code",
         "useradmin.price": "fa-solid fa-wallet",

@@ -36,7 +36,6 @@
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
 							<li><a href="{% url 'categories' %}">Category</a></li>
-							<li><a href="{% url 'courses' %}">Group</a></li>
 							<li><a href="{% url 'prices' %}">Price</a></li>
 							<li><a href="{% url 'blog' %}">Blog</a></li>
 							<li><a href="{% url 'contact' %}">Contact</a></li>
@@ -66,15 +65,14 @@
 
     <div id="fh5co-project">
 		<div class="container-fluid proj-bottom">
-			<div class="row">
-				{% for category in categories %}
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="{% url 'courses' %}"><img src="{{ category.image.url }}" alt="" class="img-responsive">
-						<span style="color: black">{{ category.desc }}</span>
-					</a>
-				</div>
-				{% endfor %}
+			{% for category in categories %}
+			<div class="img-col">
+				<a href="{% url 'courses' category.slug %}">
+					<img src="{{ category.image.url }}" alt="{{ category.name }}">
+				</a>
+				<div class="cat-title">{{ category.name }}</div>
 			</div>
+			{% endfor %}
 		</div>
 	</div>
 
@@ -90,7 +88,6 @@
 					<ul class="fh5co-footer-links">
 						<li><a href="{% url 'accounts:index' %}">Course</a></li>
 						<li><a href="{% url 'categories' %}">Category</a></li>
-						<li><a href="{% url 'courses' %}">Group</a></li>
 						<li><a href="{% url 'prices' %}">Price</a></li>
 						<li><a href="{% url 'blog' %}">Blog</a></li>
 						<li><a href="{% url 'contact' %}">Contact</a></li>

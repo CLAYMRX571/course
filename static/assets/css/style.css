@@ -333,6 +333,7 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   width: 100%;
 }
+
 .fh5co-cover .overlay {
   z-index: 0;
   position: absolute;
@@ -340,7 +341,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: transparent !important;
 }
 .fh5co-cover > .fh5co-container {
   position: relative;
@@ -526,100 +527,140 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 7em;
 }
 
-.marketing-card-container {
+.book-card {
+  max-width: 900px;
+  margin-top: 80px;
+  display: flex;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(30,70,120,0.10);
+  padding: 34px 40px;
+  gap: 36px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.back-arrow {
+  font-size: 2.1em;
+  color: #1b2c3b;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.social-btns {
+  display: flex;
+  gap: 36px;
+  margin: 30px 0;
+}
+
+.btn svg {
+  margin-right: 7px;
+  min-width: 22px;
+}
+
+.btn.telegram {
+  background: #20b7e6;
+  color: #fff;
+}
+
+.btn.email {
+  background: #fff;
+  color: #b34235;
+  border: 2px solid #d5e7eb;
+  box-shadow: none;
+}
+
+.btn.email svg {
+  margin-right: 7px;
+}
+
+.book-title {
+  font-size: 2.1em;
+  color: #273041;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.book-cover img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.13);
+  background: #fff;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h2 {
+  font-size: 2.1em;
+  margin-top: 0;
+  color: #263242;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.info-labels {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  padding: 20px 15px;
+  gap: 10px 14px; 
+  margin-bottom: 18px;
 }
 
-.course-card {
-  width: 350px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  background: #fff;
-  font-family: 'Segoe UI', sans-serif;
-  transition: transform 0.3s;
+.info-pill {
+  background: #cdf0f2;           
+  color: #2b4853;              
+  font-size: 1em;
+  border-radius: 18px;           
+  padding: 5px 17px;
+  display: inline-block;
+  font-family: "Montserrat", "Arial", sans-serif;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 3px rgba(20,40,60,0.04);
 }
 
-.course-card:hover {
-  transform: translateY(-5px);
+.info-pill b {
+  color: #25384e;
+  font-weight: 600;
 }
 
-.course-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.course-content {
-  padding: 16px;
-  background-color: #f9f9fb;
-}
-
-.course-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-.course-title {
-  font-size: 17px;
-  font-weight: bold;
-  color: lch(3.32% 0 296.81);
-  margin: 10px 0;
-}
-
-.course-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 12px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-}
-
-.course-rating {
-  font-size: 14px;
-  color: #444;
-}
-
-.course-rating .star {
-  color: orange;
-  margin-right: 4px;
-}
-
-.course-price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+.desc {
+  font-size: 1.13em;
+  color: #294d59;
+  margin-bottom: 22px;
+  line-height: 1.7;
+  margin-top: auto;
 }
 
 .mt {
   margin-top: 70px;
 }
+
 .mt h4 {
   position: relative;
   padding-left: 40px;
   font-size: 20px;
 }
+
 .mt h4 i {
   position: absolute;
   left: 0;
   top: 0;
   color: #EA9215;
 }
+
 .mt > div {
   margin-bottom: 40px;
 }
+
 .mt .list-nav {
   margin: 50px 0 30px 0;
   padding: 0;
 }
+
 .mt .list-nav li {
   list-style: none;
   margin: 0;
@@ -707,7 +748,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .proj-bottom {
-  padding-bottom: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* logolar orasidagi masofa */
+  padding: 100px 20px;
 }
 
 .fh5co-project {
@@ -999,6 +1044,7 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   width: 100%;
 }
+
 #fh5co-started .overlay {
   z-index: 0;
   position: absolute;
@@ -1006,8 +1052,9 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
 }
+
 #fh5co-started .fh5co-heading h2 {
   color: #fff;
   margin-bottom: 20px !important;
@@ -1172,6 +1219,41 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .btn-select-plan:hover {
   background-color: #10ac84;
+}
+
+.proj-bottom {
+  display: flex;
+  gap: 120px;          
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.img-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;        
+}
+
+.img-col img {
+  width: 100%;
+  max-width: 220px;     
+  height: auto;
+  display: block;
+  margin-bottom: 12px;  
+  background: transparent;
+  border-radius: 12px;
+}
+
+.cat-title {
+  text-align: center;
+  font-weight: 600;
+  color: #294d59;
+  font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  letter-spacing: .5px;
 }
 
 #fh5co-footer {

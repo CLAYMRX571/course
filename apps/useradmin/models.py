@@ -2,16 +2,22 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from datetime import timedelta, time, date, datetime
 from django.core.exceptions import ValidationError
 from apps.common.models import BaseModel
+from django.utils.text import slugify
 from apps.user.models import User
 from django.db import models
 
 class Category(BaseModel):
-    desc = models.TextField()
+    name = models.CharField(max_length=255)
     image = models.FileField(upload_to='category/')
+    slug = models.SlugField(max_length=150, unique=True, blank=True)
 
-    class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Category"
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
 
 class Course(BaseModel):
     BEGIN_TIME = [
@@ -25,13 +31,14 @@ class Course(BaseModel):
     DURATION = [
         (2, '2 soat'),
     ]
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='courses')
     created_by_admin = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     desc = models.TextField()
     photo = models.FileField(upload_to='course/')
     group_number = models.IntegerField(default=0)
     begin_time = models.TimeField(choices=BEGIN_TIME)
     duration = models.IntegerField(choices=DURATION, default=2)
-    grade = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)], null=True, blank=True)
+    grade = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)], null=True, blank=True)
 
     @property
     def end_time(self):
@@ -44,9 +51,8 @@ class Course(BaseModel):
         if self.duration != 2:
             raise ValidationError({'duration': "Dars davomi 2 soat bo'lishi kerak."})
         
-    class Meta:
-        verbose_name = "Course"
-        verbose_name_plural = "Courses"
+    def __str__(self):
+        return self.desc
 
 class Price(BaseModel):
     name = models.CharField(max_length=255)
